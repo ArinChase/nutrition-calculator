@@ -1,0 +1,49 @@
+/*----------------------------------------
+ * CSS Variables - This file goes with 
+ * { _themes.css }
+ * 
+ * Coded by ACWebDesigns                      
+ *---------------------------------------*/
+
+/* ----- Font Imports ------ */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500&display=swap');
+
+/* Root variables defined */
+:root {
+	/* Custom Colors */
+	--blue-dark: #227093;	
+	--blue: #34ace0;	
+	--cadet-blue: #5F9EA0;	
+	--dark: #343a40;	
+	--green-dark: #218c74;	
+	--green: #33d9b2;	
+	--grey-dark: #404040;
+	--grey-medium: #727476;	
+	--grey-light: #ced4da;	
+	--grey: #84817a;	
+	--light: #e9ecef;	
+	--navy: #003366;	
+	--orange-dark: #cd6133;	
+	--orange: #ff7d59;	
+	--purple-dark: #474787;	
+	--purple-light: #dabee5;	
+	--purple: #706fd3;	
+	--red-dark: #b33939;	
+	--red: #ff5252;	
+	--super-light: #f8f9fa;	
+	--turquoise: #48d1cc;	
+	--yellow-dark: #ccae62;	
+	--yellow: #ffd463;
+
+	/* Fonts */
+	--poppins: 'Poppins', sans-serif;
+	--barlow: 'Barlow Semi Condensed', sans-serif;
+
+	/* Default Theme */
+	--theme: var(--cadet-blue);
+	--theme-font: var(--poppins);
+}
+
+
+

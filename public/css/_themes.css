@@ -1,0 +1,91 @@
+/*----------------------------------------
+ * CSS Theme Classes - This file needs  
+ * { _variables.css } to work properly.
+ * 
+ * Coded by ACWebDesigns                      
+ *---------------------------------------*/
+
+ /* Themes are color presets for backgrounds and text. 
+  * Placing a theme class such as theme-blue in a div then
+  * allows any theme-classes to work such as bg-theme, which
+  * will make the background blue.
+  */
+
+ /* Theme Classes */
+.ac-bg { background: var(--theme); }
+.ac-btn { 
+	background: var(--theme);
+	color: white;
+	border: none;
+	transition: .2s;
+}
+.ac-btn:hover, .ac-btn:focus { 
+	border: 1px solid var(--theme);
+	background: white;
+	color: var(--theme);
+	transition: .6s;
+}
+.ac-btn-outline, .ac-btn-outline:hover { 
+	border: 1px solid var(--theme) !important;
+	background: white !important;
+	color: var(--theme) !important;
+	transition: .5s !important;
+}
+.ac-border { border-color: var(--theme); }
+.ac-border-gradient { border-image: var(--theme) 1; }
+.ac-text {  
+	background: var(--theme);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+ }
+
+ /* Animation Effects */
+ .ac-raise:hover {
+ 	box-shadow: 0 0.5em 0.5em -0.4em var(--theme) !important;
+	transform: translateY(-0.25em) !important;
+	transition: .2s !important;
+ }
+ .ac-fill:hover {
+ 	background: var(--theme) !important;
+ 	color: white !important;
+ 	transition: .2s !important;
+ }
+.ac-slide:hover {
+ 	box-shadow: inset 6.5em 0 0 0 var(--theme) !important;
+ 	color: white !important;
+ 	transition: .5s !important;
+ }
+
+/* Solid Theme Presets */
+.ac-blue { --theme: var(--blue); }
+.ac-blue-dark { --theme: var(--blue-dark); }
+.ac-cadet-blue { --theme: var(--cadet-blue); }
+.ac-dark { --theme: var(--dark); }
+.ac-green-dark { --theme: var(--green-dark); }
+.ac-green { --theme: var(--green); }
+.ac-grey-dark { --theme: var(--grey-dark); }
+.ac-grey-light { --theme: var(--grey-light); }
+.ac-grey { --theme: var(--grey); }
+.ac-light { --theme: var(--light); }
+.ac-navy { --theme: var(--navy); }
+.ac-orange-dark { --theme: var(--orange-dark); }
+.ac-orange { --theme: var(--orange); }
+.ac-purple-dark { --theme: var(--purple-dark); }
+.ac-purple-light { --theme: var(--purple-light); }
+.ac-purple { --theme: var(--purple); }
+.ac-red-dark { --theme: var(--red-dark); }
+.ac-super-light { --theme: var(--super-light); }
+.ac-turquoise { --theme: var(--turquoise); }
+.ac-yellow-dark { --theme: var(--yellow-dark); }
+.ac-yellow { --theme: var(--yellow); }
+
+/* Gradient Theme Presets */
+.ac-aqua { --theme: linear-gradient(to top right, var(--blue), var(--green)); }
+.ac-blossom { --theme: linear-gradient(315deg, #fad0c4 0%, #f1a7f1 74%); }
+.ac-flame { --theme: linear-gradient(to top right, #e6c84f 0%, #e8807f 74%); }
+.ac-peach { --theme: linear-gradient(315deg, #f9d1b7 0%, #f894a4 74%); }
+.ac-yogurt { --theme: linear-gradient(315deg, #96c8fb 0%, #ddbdfc 74%); }
+
+/* Font Presets */
+.ac-poppins { font-family: var(--poppins); }
+.ac-barlow { font-family: var(--barlow); }

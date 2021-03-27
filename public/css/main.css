@@ -1,0 +1,73 @@
+/* Main.css - Created 10/7/2020 - Arin Chase */
+
+@import '_variables.css';
+@import '_themes.css';
+
+:root {
+	--header-size: 75px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1 { font-size: 3.5em !important; }
+h4 { font-size: 1.8em; }
+
+body {
+  font-family: var(--theme-font);
+  /*font-weight: 400;*/
+  height: 100%;
+}
+
+/* Font awesome */
+i {
+	font-size: 3em;
+	color: var(--theme);
+}
+
+main {  }
+
+nav {
+	height: var(--header-size);
+}
+
+form {width: 90%; max-width: 900px; margin: 0 auto }
+form .field {width: 100%; position: relative; margin-bottom: 15px; }
+form .field input, form .field textarea, form .field select {-webkit-appearance: none; }
+
+form .field input { border: none; background: var(--super-light); color: var(--grey); width: 80%; margin: 0; padding: 18px 0; padding-left: 6%; font-size: 1.45em; letter-spacing: 0.05em; border: 2px solid var(--grey-medium); border-left: none; }
+form .field input[type="submit"] { background: var(--dark); color: white; width: 20%; padding: 18px 0px; font-size: 1.45em; letter-spacing: 0.075em; border: 2px solid var(--dark); transition: 0.35s;}
+form .field input::-webkit-input-placeholder { color: var(--grey-medium)}
+form .field input:focus, form .field input[type="text"].focused { outline: none; }
+form .field input:focus + input[type="submit"], form .field input.focused + input[type="submit"] {  }
+form .field input:valid + input[type="submit"] { }
+form .field input.focused + input[type="submit"] { }
+form .field input[type="submit"]:hover { background: var(--cadet-blue); border-color: var(--cadet-blue); border-right-color: var(--grey-medium); }
+
+.card {
+	border: 2px solid var(--grey-medium);
+	border-radius: 0;
+}
+
+.card-title {
+	text-transform: capitalize;
+}
+
+.space {
+	height: 1000px;
+	background: var(--super-light);
+}
+
+.navSpace {
+	padding-top: var(--header-size);
+}
+
+.nutrition-icon {
+	width: 50%;
+	max-width: 350px;
+}
+
+.thumbnail {
+	width: 40px
+}

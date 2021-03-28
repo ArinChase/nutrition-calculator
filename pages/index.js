@@ -18,7 +18,7 @@ const NutritionHome = () => {
   const fetchData = async event => {
     event.preventDefault() // Don't redirect page
 
-    const res = await fetch(`http://localhost:3000/api/search?query=${event.target.input.value}`);
+    const res = await fetch(`/api/search?query=${event.target.input.value}`);
 
     const json = await res.json();
 

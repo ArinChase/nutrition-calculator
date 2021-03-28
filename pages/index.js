@@ -79,7 +79,7 @@ const NutritionHome = () => {
         <div className="navSpace"></div>
         <Image src="/images/food.png" className="m-3 ac-super-light ac-bg p-3 nutrition-icon" roundedCircle />
         <h1 className="display-4 pt-4 ac-super-light ac-text"><strong>Nutrition Calculator</strong></h1>
-        <h4 className="px-2 py-4 ac-super-light ac-text"> - Powered by <a className="ac-grey-medium ac-text font-weight-bold" href="https://nutritionix.com" target="_blank">Nutritionix Api</a></h4>
+        <h4 className="px-2 py-4 ac-super-light ac-text"> - Powered by <a className="ac-grey-medium ac-text font-weight-bold" href="https://nutritionix.com" target="_blank">Nutritionix Api</a> -</h4>
       </div>
       
       <div className="container ac-super-light ac-bg">

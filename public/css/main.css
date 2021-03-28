@@ -26,8 +26,6 @@ i {
 	color: var(--theme);
 }
 
-main {  }
-
 nav {
 	height: var(--header-size);
 }
@@ -54,9 +52,8 @@ form .field input[type="submit"]:hover { background: var(--cadet-blue); border-c
 	text-transform: capitalize;
 }
 
-.space {
-	height: 1000px;
-	background: var(--super-light);
+.logo img {
+	width: 200px;
 }
 
 .navSpace {
@@ -68,6 +65,11 @@ form .field input[type="submit"]:hover { background: var(--cadet-blue); border-c
 	max-width: 350px;
 }
 
+.space {
+	height: 1000px;
+	background: var(--super-light);
+}
+
 .thumbnail {
-	width: 40px
+	width: 50px
 }

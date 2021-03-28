@@ -64,6 +64,7 @@
 .ac-green-dark { --theme: var(--green-dark); }
 .ac-green { --theme: var(--green); }
 .ac-grey-dark { --theme: var(--grey-dark); }
+.ac-grey-medium { --theme: var(--grey-medium); }
 .ac-grey-light { --theme: var(--grey-light); }
 .ac-grey { --theme: var(--grey); }
 .ac-light { --theme: var(--light); }

@@ -1,11 +1,10 @@
-/* Main.css - Created 10/7/2020 - Arin Chase */
+/* Main.css - Arin Chase - 2021 */
 
-@import '_variables.css';
-@import '_themes.css';
+/* Import dependency files */
+@import '_variables.css'; /* Contains variables for color presets */
+@import '_themes.css'; /* Contains theme classes using variables */
 
-:root {
-	--header-size: 75px;
-}
+:root { --navbar-size: 75px; } /* Navbar height */
 
 html {
 	scroll-behavior: smooth;
@@ -16,7 +15,7 @@ h4 { font-size: 1.8em; }
 
 body {
   font-family: var(--theme-font);
-  /*font-weight: 400;*/
+  font-weight: 400;
   height: 100%;
 }
 
@@ -26,14 +25,14 @@ i {
 	color: var(--theme);
 }
 
-nav {
-	height: var(--header-size);
-}
+nav { height: var(--navbar-size); }
 
+th, td { padding-left: 15px !important; border: none !important; }
+
+/* Styles for custom search form */
 form {width: 90%; max-width: 900px; margin: 0 auto }
-form .field {width: 100%; position: relative; margin-bottom: 15px; }
+form .field { width: 100%; position: relative; margin-bottom: 15px; }
 form .field input, form .field textarea, form .field select {-webkit-appearance: none; }
-
 form .field input { border: none; background: var(--super-light); color: var(--grey); width: 80%; margin: 0; padding: 18px 0; padding-left: 6%; font-size: 1.45em; letter-spacing: 0.05em; border: 2px solid var(--grey-medium); border-left: none; }
 form .field input[type="submit"] { background: var(--dark); color: white; width: 20%; padding: 18px 0px; font-size: 1.45em; letter-spacing: 0.075em; border: 2px solid var(--dark); transition: 0.35s;}
 form .field input::-webkit-input-placeholder { color: var(--grey-medium)}
@@ -43,33 +42,70 @@ form .field input:valid + input[type="submit"] { }
 form .field input.focused + input[type="submit"] { }
 form .field input[type="submit"]:hover { background: var(--cadet-blue); border-color: var(--cadet-blue); border-right-color: var(--grey-medium); }
 
+/* Custom classes */
 .card {
-	border: 2px solid var(--grey-medium);
-	border-radius: 0;
+	border: none;
+	border-radius: 0 !important;
+	width: 90%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 10px auto;
+	background: white;
 }
 
-.card-title {
-	text-transform: capitalize;
+.card-title { text-transform: capitalize; font-weight: 600; font-size: 1.5em; }
+
+.logo img { width: 200px; }
+
+.navSpace { padding-top: var(--navbar-size); }
+
+.nutrition-icon { width: 50%; max-width: 350px; }
+
+.space { height: 1000px; background: var(--super-light); }
+
+.thumbnail { width: 50px; mix-blend-mode: multiply; }
+
+.underlined { text-decoration: underline !important; }
+
+/* Responsive tables for mobile classes */
+.table-responsive-stack .responsive-thead { font-weight: bold; }
+.responsive-thead {	display: none; }
+
+#navbar { padding: 0 !important; }
+
+@media screen and (max-width: 1155px) {
+	.table-responsive-stack td, .table-responsive-stack thead {
+		font-size: .90em;;
+	}
 }
 
-.logo img {
-	width: 200px;
+@media screen and (max-width: 973px) {
+	.card { max-width: 50%; min-width: 350px; background: none; }
+	.nav { margin-left: 20px; }
+	.table-responsive-stack td, .responsive-thead { font-size: 1em; }
+	.table-responsive-stack thead { display: none; }
+	.table-responsive-stack tr {
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    display:block;
+	    background: var(--cadet-blue);
+	    color: var(--super-light);
+  	}
+	/*  IE9 FIX   */
+	.table-responsive-stack td {
+		float: left\9; width:100%; display:block; -ms-flex: 1 1 auto; flex: 1 1 auto;
+	}
+	.responsive-thead { display: inline; }
 }
 
-.navSpace {
-	padding-top: var(--header-size);
+@media screen and (max-width: 570px) {
+	form { width: 100%; margin: 0 auto; }
+	form .field input[type="submit"], form .field input { width: 80%; margin-left: 10%; }
+	form .field input { border-left: 2px solid var(--grey-medium); border-top: none; }
+	form .field input[type="submit"] { border-right: none; }
 }
 
-.nutrition-icon {
-	width: 50%;
-	max-width: 350px;
-}
 
-.space {
-	height: 1000px;
-	background: var(--super-light);
-}
 
-.thumbnail {
-	width: 50px
-}

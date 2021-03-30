@@ -2,13 +2,13 @@
  * CSS Theme Classes - This file needs  
  * { _variables.css } to work properly.
  * 
- * Coded by ACWebDesigns                      
+ * By Arin Chase                   
  *---------------------------------------*/
 
  /* Themes are color presets for backgrounds and text. 
-  * Placing a theme class such as theme-blue in a div then
-  * allows any theme-classes to work such as bg-theme, which
-  * will make the background blue.
+  * Placing a theme class such as 'ac-blue' in a div then
+  * allows any theme-classes to work such as 'ac-bg' or 'ac-text', which
+  * will make the background or text blue respectively.
   */
 
  /* Theme Classes */
@@ -34,7 +34,13 @@
 .ac-border { border-color: var(--theme); }
 .ac-border-gradient { border-image: var(--theme) 1; }
 .ac-text {  
-	background: var(--theme);
+	color: var(--theme);
+ }
+ a.ac-text:hover {
+ 	color: var(--dark);
+ }
+ .ac-gradient-text {
+ 	background: var(--theme);
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
  }

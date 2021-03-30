@@ -47,16 +47,16 @@ const NutritionHome = () => {
               </thead>
               <tbody>
                 <tr className="p-3">
-                  <td><span class="responsive-thead">Calories: </span> {Math.round(data.foods[0].nf_calories)} </td>
-                  <td><span class="responsive-thead">Sodium: </span> {data.foods[0].nf_sodium}m g </td>
-                  <td><span class="responsive-thead">Total Fat: </span> {data.foods[0].nf_total_fat} g </td>
-                  <td><span class="responsive-thead">Saturated Fat: </span> {data.foods[0].nf_saturated_fat} g </td>
-                  <td><span class="responsive-thead">Cholesterol: </span> {data.foods[0].nf_cholesterol} mg </td>
-                  <td><span class="responsive-thead">Carbohydrates: </span> {data.foods[0].nf_total_carbohydrate} g </td>
-                  <td><span class="responsive-thead">Fiber: </span> {data.foods[0].nf_dietary_fiber} g </td>
-                  <td><span class="responsive-thead">Sugar: </span> {data.foods[0].nf_sugars} g </td>
-                  <td><span class="responsive-thead">Protein: </span> {data.foods[0].nf_protein} g </td>
-                  <td><span class="responsive-thead">Potassium: </span> {data.foods[0].nf_potassium} mg </td>     
+                  <td><span className="responsive-thead">Calories: </span> {Math.round(data.foods[0].nf_calories)} </td>
+                  <td><span className="responsive-thead">Sodium: </span> {data.foods[0].nf_sodium}m g </td>
+                  <td><span className="responsive-thead">Total Fat: </span> {data.foods[0].nf_total_fat} g </td>
+                  <td><span className="responsive-thead">Saturated Fat: </span> {data.foods[0].nf_saturated_fat} g </td>
+                  <td><span className="responsive-thead">Cholesterol: </span> {data.foods[0].nf_cholesterol} mg </td>
+                  <td><span className="responsive-thead">Carbohydrates: </span> {data.foods[0].nf_total_carbohydrate} g </td>
+                  <td><span className="responsive-thead">Fiber: </span> {data.foods[0].nf_dietary_fiber} g </td>
+                  <td><span className="responsive-thead">Sugar: </span> {data.foods[0].nf_sugars} g </td>
+                  <td><span className="responsive-thead">Protein: </span> {data.foods[0].nf_protein} g </td>
+                  <td><span className="responsive-thead">Potassium: </span> {data.foods[0].nf_potassium} mg </td>     
                 </tr>
               </tbody>
             </table>
@@ -83,7 +83,6 @@ const NutritionHome = () => {
       <meta name="author" conten="Arin Chase" />
       <link rel="icon" href="/images/food.png" />
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" />
-      <script src="/js/responsive-tables.js" />
     </Head>
 
     <main className="ac-super-light ac-bg">

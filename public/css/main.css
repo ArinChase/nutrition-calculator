@@ -59,7 +59,7 @@ form .field input[type="submit"]:hover { background: var(--cadet-blue); border-c
 
 .navSpace { padding-top: var(--navbar-size); }
 
-.nutrition-icon { width: 50%; max-width: 350px; }
+.nutrition-icon { width: 50%; max-width: 350px; min-width: 225px; }
 
 .space { height: 1000px; background: var(--super-light); }
 

@@ -1,3 +1,8 @@
+/* Search.js Api - Arin Chase - 2021 */
+
+/* Api Usage - Retrieves nutritionix.com api data using /v2/natural/nutrients endpoint */
+
+/* Imports */
 import nextConnect from 'next-connect'
 import fetch from 'isomorphic-unfetch'
 

@@ -1,6 +1,11 @@
+/* Database.js - Arin Chase - 2021 */
+
+/* Imports */
 import { MongoClient } from 'mongodb';
 import nextConnect from 'next-connect';
 
+
+/* Connect to Mongodb database given environment variable credientals */
 const client = new MongoClient(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

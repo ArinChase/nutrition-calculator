@@ -28,7 +28,7 @@ const NavBar = () => {
           <Navbar.Brand href="#home" className="pl-4">Arin Chase</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" className="mr-3 mt-1" />
           <Navbar.Collapse id="basic-navbar-nav">  
-            <Nav className="ml-auto nav pl-4">
+            <Nav className="ml-auto nav px-4">
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#portfolio">Portfolio</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>

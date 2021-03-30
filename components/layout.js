@@ -1,3 +1,6 @@
+/* Website layout template - Arin Chase - 2021 */
+
+/* Imports */
 import NavBar from './navbar'
 import Footer from './footer'
 

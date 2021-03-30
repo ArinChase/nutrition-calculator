@@ -1,3 +1,6 @@
+/* Next.Js Web Application - Arin Chase - 2021 */
+
+/* Imports */
 import App from 'next/app'
 import Layout from '../components/layout'
 import 'bootstrap/dist/css/bootstrap.min.css'

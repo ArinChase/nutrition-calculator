@@ -6,7 +6,7 @@ This is a simple program that gets nutrition api data from [nutritionix](https:/
 * [Bootstrap](https://getbootstrap.com/) - A responsive styling framework
 * [Vercel](https://vercel.com/) - A free, serverless hosting platform that offers continuous deployment through the project's [github](https://github.com/ArinChase/nutrition-calculator)
 
-### Live deployment
+### Live demo
 This application is running live on my website @ [arinchase.com](https://arinchase.com).
 
 ### Author

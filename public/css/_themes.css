@@ -77,9 +77,11 @@
 .ac-navy { --theme: var(--navy); }
 .ac-orange-dark { --theme: var(--orange-dark); }
 .ac-orange { --theme: var(--orange); }
+.ac-pink { --theme: var(--pink); }
 .ac-purple-dark { --theme: var(--purple-dark); }
 .ac-purple-light { --theme: var(--purple-light); }
 .ac-purple { --theme: var(--purple); }
+.ac-red { --theme: var(--red); }
 .ac-red-dark { --theme: var(--red-dark); }
 .ac-super-light { --theme: var(--super-light); }
 .ac-turquoise { --theme: var(--turquoise); }
@@ -96,3 +98,7 @@
 /* Font Presets */
 .ac-poppins { font-family: var(--poppins); }
 .ac-barlow { font-family: var(--barlow); }
+
+/* Additional */
+.f-400 { font-weight: 400; }
+.f-300 { font-weight: 300; }

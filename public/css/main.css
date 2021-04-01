@@ -20,7 +20,7 @@ body {
 }
 
 /* Font awesome */
-i {
+i.fa {
 	font-size: 3em;
 	color: var(--theme);
 }
@@ -41,6 +41,27 @@ form .field input:focus + input[type="submit"], form .field input.focused + inpu
 form .field input:valid + input[type="submit"] { }
 form .field input.focused + input[type="submit"] { }
 form .field input[type="submit"]:hover { background: var(--cadet-blue); border-color: var(--cadet-blue); border-right-color: var(--grey-medium); }
+
+/* Autocomplete styles */
+.autocomplete {
+	width: 80%;
+	background: white;
+	margin-left: 20%;
+	transition: .5s;
+}
+
+.autocomplete div {
+	font-size: 1.5em;
+	background: white;
+	padding: 5px 15px 5px 30px;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.autocomplete div:hover { background: var(--cadet-blue); color: white; }
+
+
 
 /* Custom classes */
 .card {
@@ -101,10 +122,12 @@ form .field input[type="submit"]:hover { background: var(--cadet-blue); border-c
 }
 
 @media screen and (max-width: 570px) {
-	form { width: 100%; margin: 0 auto; }
-	form .field input[type="submit"], form .field input { width: 80%; margin-left: 10%; }
+	form { width: 80%; margin: 0 auto; }
+	form .field input[type="submit"], form .field input { width: 100%; }
 	form .field input { border-left: 2px solid var(--grey-medium); border-top: none; }
 	form .field input[type="submit"] { border-right: none; }
+	.autocomplete { width: 100%; margin: 0; }
+	.card { max-width: 90%; }
 }
 
 

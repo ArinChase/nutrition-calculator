@@ -8,22 +8,55 @@ import { useState } from 'react'
 
 const NutritionHome = () => {
 
-  let [data, setData] = useState(0); // Used for ajax
+  let [data, setData] = useState(0); 
+  let [instantData, setInstantData] = useState(0);
   let [hasSearched, setHasSearched] = useState(0);
+  let [value, setValue] = useState(0);
+  let [counter, updateCounter] = useState(0);
+  let [search, setSearch] = useState("");
 
-  const fetchData = async event => {
+  /* Fetchs api data on search submit */
+  const fetchData = async e => {
     event.preventDefault() // Stop page reload from form submit
-
-    const res = await fetch(`/api/search?query=${event.target.input.value}`); // Get api data from user form input
-
+    const res = await fetch(`/api/search?query=${e.target.input.value}`); // Get api data from user form input
     const json = await res.json();
-
     setData(json); // Update data with api results asynchronously
     setHasSearched(true);
   }
 
+  /* Handles change in search input (calls api every 4th keyboard event for autocomplete)  */
+  let handleChange = async value => {
+
+    setSearch(value);
+    setValue(value); // Update with current value of input search
+    updateCounter(counter + 1); // Update count of letters typed
+
+    // Call on API every 4th charcter entered
+    if(counter % 4 == 0) {
+      const res = await fetch(`/api/instant?query=${value}`);
+      const json = await res.json();
+      setInstantData(json);
+    }
+  }
+
+  /* Handles autocomplete click (User clicks on one of items on the autocomplete list) */
+  let handleClick = name => {
+    setInstantData(null);
+    setSearch(name);
+  }
+
+  /* Renders the list of items for the autocomplete */
+  const renderDatalist = (json) => {
+    if(instantData && instantData.common) {
+      return instantData.common.slice(0,5).map(food => <div onClick={() => {handleClick(food.food_name)}} key={food.food_name} >{food.food_name}</div>);
+    }   
+  }
+
+
+
   /* Renders the api results in a table format */
-  function renderData() {
+  const renderData = () => {
+
     /* If the api found an item given the user input */
     if(data.foods) {
       return (
@@ -100,14 +133,25 @@ const NutritionHome = () => {
           <h4 className="px-2 pt-2 pb-5 text-center ac-grey-medium ac-text">Find nutritional info on ingredients and meals</h4>
           
           <form onSubmit={fetchData} className="ac-cadet-blue" id="form">
+
             <div className="field">
               <input className="button" type="submit" value="Search" name="submit" />
-              <input type="text" placeholder="Enter an ingredient..." name="input" autoComplete="off" required /> 
+              <input 
+                type="text" 
+                placeholder="Enter an ingredient..." 
+                name="input" 
+                autoComplete="off" 
+                onChange={ e => { handleChange(e.target.value) } } 
+                value={search}
+                required 
+              /> 
+              <div className="autocomplete">
+                {renderDatalist()}
+              </div>
             </div>
           </form>
           <div className="py-5">{renderData()}</div>
         </div>
-       
       </div>
     </main>
   </>

@@ -1,4 +1,4 @@
-![Alt text](/public/images/preview.png)
+![Alt text](/public/images/preview_nc.png)
 
 # Nutrition Calculator
 This is a simple program that gets nutrition api data from [nutritionix](https://nutritionix.com). It utilizes React hooks to asynchronously render both the autocomplete feature and the nutritional info of an ingredient. The web page was also built mobile and SEO friendly by taking advantage of the chrome developer tools.
